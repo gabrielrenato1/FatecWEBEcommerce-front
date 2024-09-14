@@ -77,3 +77,23 @@ nav{
         transition: 0.25s;
     }
 }
+
+footer{
+    width: 100vw;
+    background-color: var(--primary-color);
+    padding: 20px 0px;
+    margin: auto;
+    color: #ffffff;
+    text-align: center;
+
+    a{
+        font-style: none;
+        text-decoration: none;
+        color: #ffffff;
+    }
+
+    a:hover{
+        color: #c2c2c2;
+        transition: 0.25s;
+    }
+}
