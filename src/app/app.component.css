@@ -1,0 +1,19 @@
+nav{
+    width: 100vw;
+    background-color: black;
+    padding: 20px 0px;
+    justify-content: space-evenly;
+    display: flex;
+    margin: auto;
+    a{
+        font-style: none;
+        text-decoration: none;
+        color: #ffffff;
+        font-size: 20px;
+    }
+    a:hover{
+        color: #c2c2c2;
+        transition: 0.25s;
+    }
+
+}
