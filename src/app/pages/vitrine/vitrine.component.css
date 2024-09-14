@@ -1,0 +1,11 @@
+
+.page{
+    margin: auto;
+}
+
+.products-grid{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 70px 50px; 
+    margin: 30px;
+}

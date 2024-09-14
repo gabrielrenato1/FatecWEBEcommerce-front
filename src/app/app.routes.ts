@@ -1,11 +1,11 @@
 import { Routes } from '@angular/router';
-import { CadastroComponent } from './components/pages/cadastro/cadastro.component';
-import { CestaComponent } from './components/pages/cesta/cesta.component';
-import { DetalheComponent } from './components/pages/detalhe/detalhe.component';
-import { EsqueciSenhaComponent } from './components/pages/esqueci-senha/esqueci-senha.component';
-import { LoginComponent } from './components/pages/login/login.component';
-import { PesquisaComponent } from './components/pages/pesquisa/pesquisa.component';
-import { VitrineComponent } from './components/pages/vitrine/vitrine.component';
+import { CadastroComponent } from './pages/cadastro/cadastro.component';
+import { CestaComponent } from './pages/cesta/cesta.component';
+import { DetalheComponent } from './pages/detalhe/detalhe.component';
+import { EsqueciSenhaComponent } from './pages/esqueci-senha/esqueci-senha.component';
+import { LoginComponent } from './pages/login/login.component';
+import { PesquisaComponent } from './pages/pesquisa/pesquisa.component';
+import { VitrineComponent } from './pages/vitrine/vitrine.component';
 
 export const routes: Routes = [
     {path:"", component:VitrineComponent},
