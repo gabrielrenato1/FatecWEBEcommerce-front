@@ -1,18 +1,9 @@
-.card{
-    /* padding: 7px; */
-    background-color: var(--secondary-color);
-    width: 100%;
-    height: 100%;
-    border-radius: 5px;
-    /* margin:5px; */
-}
-
-.card-margin{
-    margin: 7px;
-}
- 
  .card-image{
     text-align: center;
+}
+
+.card-content{
+    margin: 7px;
 }
 
  img{
@@ -27,20 +18,16 @@
     width: 100%;
 }
 
+button{
+    width: 55px;
+    font-size: 20px;
+}
+
 .card-footer{
 
     display: flex;
     justify-content: space-between;
-
-    button{
-        height: 53px;
-        border-radius: 8px;
-        padding: 10px;
-        border: none;
-        background-color: var(--primary-color);
-        color: #ffffff;
-    }
-    
+    margin-top: auto;
     span{
         margin: auto 0px;
         font-size: 20px;

@@ -9,3 +9,9 @@
     gap: 70px 50px; 
     margin: 30px;
 }
+
+@media (orientation:portrait) {
+    .products-grid{
+        grid-template-columns: auto;
+    }
+}

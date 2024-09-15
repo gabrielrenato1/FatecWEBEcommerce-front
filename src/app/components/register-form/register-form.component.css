@@ -1,0 +1,72 @@
+.page{
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.card{
+    display: flex;
+    min-width: fit-content;
+    width: 60%;
+    margin: auto;
+}
+
+.form-side{
+
+    padding: 35px;
+    border-right: solid 0.5px;
+    width: 60%;
+    height: fit-content;
+    margin: auto;
+    
+    form{
+        display: grid;
+        
+        input{
+            margin-bottom: 40px;
+            width: 100%;
+        }
+    }
+    a{
+        margin: 0px auto;
+        width: fit-content;
+        color: #000000;
+    }
+
+}
+
+
+#login-button{
+
+    margin-bottom: 40px;
+    width: 100%;
+
+}
+
+.message-side{
+    text-align: center;
+    padding: 35px;
+    width: 40%;
+    height: fit-content;
+    margin: auto;
+
+    button{
+        width: 90%;
+    }
+}
+
+@media (orientation:portrait){
+
+    .card{
+        display: block;
+        width: 90%;
+        min-width: auto;
+        margin-bottom: 20px;
+    }
+
+    .form-side{
+        border-right: none;
+        border-top: solid 0.5px;
+    }
+
+
+}
