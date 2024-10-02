@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-
+import { Component, Input } from '@angular/core';
+import { Product } from '../../modals/product/product';
 @Component({
   selector: 'product-card',
   standalone: true,
@@ -8,5 +8,14 @@ import { Component } from '@angular/core';
   styleUrl: './product-card.component.css'
 })
 export class ProductCardComponent {
+
+  @Input() inputProduct:any;
+
+  constructor(){
+
+    // this.item = product;
+
+    // console.log(this.item);
+  }
 
 }

@@ -13,7 +13,7 @@ export const routes: Routes = [
     {path:"cadastro", component:CadastroComponent},
     {path:"esqueci-senha", component:EsqueciSenhaComponent},
     {path:"vitrine", component:VitrineComponent},
-    {path:"produto", component:DetalheComponent},
+    {path:"produto/:id", component:DetalheComponent},
     {path:"cesta", component:CestaComponent},
     {path:"pesquisa", component:PesquisaComponent},
 ];
