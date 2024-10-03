@@ -22,11 +22,47 @@ export class Product {
             arrProducts.push(this);
             index = arrProducts.length;
 
-            } else if( arrProducts[index].id == this.id){
+            } else if(arrProducts[index].id == this.id){
 
             arrProducts[index].quantity += productQuantity;
             index = arrProducts.length;
 
+            }
+
+        }
+
+        localStorage.setItem("shoppingCart", JSON.stringify(arrProducts));
+
+    }
+
+    public removeShoppingCart(id:number){
+
+        var shoppingCart = localStorage.getItem("shoppingCart")??"[]";
+        var arrProducts = JSON.parse(shoppingCart);
+
+        for (let index = 0; index <= arrProducts.length; index++) {
+            
+            if(arrProducts[index].id == id){
+                arrProducts.splice(index, 1);
+                index = arrProducts.length;
+            }
+
+        }
+
+        localStorage.setItem("shoppingCart", JSON.stringify(arrProducts));
+
+    }
+
+    public updateShoppingCart(id:number, quantity:number){
+
+        var shoppingCart = localStorage.getItem("shoppingCart")??"[]";
+        var arrProducts = JSON.parse(shoppingCart);
+
+        for (let index = 0; index <= arrProducts.length; index++) {
+            
+            if(arrProducts[index].id == id){
+                arrProducts[index].quantity = quantity;
+                index = arrProducts.length;
             }
 
         }

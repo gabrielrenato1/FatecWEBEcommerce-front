@@ -25,18 +25,26 @@ input{
     border: none;
     color: #000000 !important;
     font-size: 16px;
-    filter: drop-shadow(0px 0px 2px #000000);
+    border: solid 0.5px;
 }
 
 button{
-    height: 55px;
+    height: 60px;
     border-radius: 8px;
     padding: 10px;
     border: none;
     font-size: 20px;
     background-color: var(--primary-color);
     color: #ffffff;
-    filter: drop-shadow(0px 0px 2px #000000);
+    border: solid 1.5px;
+}
+
+.btn-secondary{
+    background-color: unset !important;
+    color: var(--primary-color);
+    filter: none;
+    font-weight: bold;
+    border:none
 }
 
 button:hover{
@@ -48,7 +56,7 @@ button:hover{
     width: 100%;
     height: 100%;
     border-radius: 5px;
-    filter: drop-shadow(0px 0px 2px #000000);
+    border: solid 0.5px;
 }
 
 a{

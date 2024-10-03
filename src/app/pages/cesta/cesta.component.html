@@ -1,3 +1,43 @@
 <div class="page-margin">
-    <p>cesta works!</p>
+    
+    <div class="shoppingCart card">
+
+        <div *ngIf="products.length > 0">
+
+            <div *ngFor="let product of products" class="cartRow">
+                 <!-- TODO: Revisar imagem -->
+                <div id="productImage">
+                    <img src="{{product.image}}" alt="">
+                </div>
+                <div id="productName">
+                    {{product.name}}
+                </div>
+                <div id="productQuantity">
+                    <input class="quantity-input" type="number" min="1" value="{{product.quantity}}" (blur)="updateProducts(product.id, $event)">Qtde.
+                </div>
+                <div id="productPrice">
+                    R${{product.price * product.quantity}}
+                </div>
+                <div id="removeProduct">
+                    <button (click)="removeProducts(product.id)"><i class="fa-solid fa-trash"></i></button>
+                </div>
+    
+            </div>
+
+        </div>
+
+        <div *ngIf="products.length == 0">
+
+            <span>Nenhum produto na cesta</span>
+
+        </div>
+        
+
+    </div>
+
+    <div class="actions">
+        <button (click)="sendOrder()">Efetuar compra</button>
+        <a href="/vitrine"><button class="btn-secondary">Voltar a comprar</button></a>
+    </div>
+
 </div>
