@@ -9,13 +9,6 @@ import { Product } from '../../modals/product/product';
 })
 export class ProductCardComponent {
 
-  @Input() inputProduct:any;
-
-  constructor(){
-
-    // this.item = product;
-
-    // console.log(this.item);
-  }
+  @Input() inputProduct:Product = new Product();
 
 }

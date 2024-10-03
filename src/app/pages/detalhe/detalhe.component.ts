@@ -20,25 +20,12 @@ export class DetalheComponent {
      this.productId = params.get('id') || 0;
     });
 
-    this.product.id = this.productId;
+    this.product.id = parseInt(this.productId);
     this.product.name = "Produto " + this.productId;
     this.product.image = "https://placehold.co/1920x1200/000000/FFF?text=Foto Produto " + this.productId;
     this.product.description = "Descrição do produto " + this.productId;
     this.product.price = 100.00 * this.productId;
     this.product.discount = 0.0;
-
-  }
-
-  public addShoppingCart(){
-
-    var tes = localStorage.getItem("shoppingCart");
-
-    if(tes === null){
-
-      // localStorage.setItem("shoppingCart", JSON.stringify(this.product));
-
-    }
-    console.log(JSON.stringify(tes));
 
   }
 
