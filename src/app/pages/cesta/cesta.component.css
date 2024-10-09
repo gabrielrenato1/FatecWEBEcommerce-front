@@ -1,10 +1,30 @@
 .actions{
     display: flex;
-    margin: 15px auto auto auto;
-    width: fit-content;
+    margin: auto auto auto auto;
+    justify-content: space-between;
+    width: 75%;
 
+    div{
+        margin: 20px;
+        height: fit-content;
+    }
     button{
         margin: auto 15px;
+    }
+}
+
+#emptyState{
+    text-align: center;
+    height: fit-content;
+    margin-top: 25%;
+    font-size: 35px;
+}
+
+#price{
+    margin-top: auto;
+    margin-bottom: auto;
+    span{
+        font-size: 20px;
     }
 }
 
@@ -79,6 +99,10 @@
         width: 95%;
     }
 
+    .actions{
+        width: 95%;
+    }
+
     .cartRow{
         flex-direction: column;
         height: fit-content;
@@ -88,6 +112,11 @@
             margin-bottom: 7.5px;
             height: fit-content;
         }
+    }
+
+    #productImage{
+        width: 100%;
+        height: auto;
     }
 
     #productName{

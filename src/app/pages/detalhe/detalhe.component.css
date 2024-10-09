@@ -57,3 +57,31 @@ button{
     }
 
 }
+
+@media (orientation:portrait){
+
+    .card{
+        max-width: none;
+    }
+
+    .card-content{
+        flex-direction: column;
+    }
+
+    .card-text{
+        width: 100%;
+        padding: 0px;
+        div{
+            margin-top: 15px;
+        }
+    }
+
+    .card-image{
+        width: 100%;
+    }
+
+    .card-footer{
+        position: unset;
+    }
+
+}

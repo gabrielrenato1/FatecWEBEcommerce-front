@@ -126,3 +126,11 @@ footer{
     position: relative;
     min-height: 100vh;
 }
+
+@media (orientation:portrait){
+
+    .header-logo{
+        text-align: center;
+    }
+
+}

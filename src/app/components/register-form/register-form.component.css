@@ -78,8 +78,14 @@
     }
 
     .form-side{
+        border-left: none;
         border-right: none;
         border-top: solid 0.5px;
+        flex-direction: column;
+    }
+
+    .flex{
+        display: block;
     }
 
 
