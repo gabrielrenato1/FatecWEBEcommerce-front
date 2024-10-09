@@ -16,4 +16,9 @@ export class LoginFormComponent {
     this.toggleLogin.emit(false)
   }
 
+  public login(event:any){
+    console.log(event)
+
+  }
+
 }

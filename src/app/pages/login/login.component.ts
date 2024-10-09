@@ -16,10 +16,7 @@ export class LoginComponent {
   public login = true;
 
   toggleLogin(event:any){
-
     this.login = event;
-    console.log(event);
-
   }
 
 }

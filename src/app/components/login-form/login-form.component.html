@@ -16,13 +16,13 @@
             <form action="">
 
                 <span>Email</span>
-                <input type="text">
+                <input type="text" required>
 
                 <span>Senha</span>
-                <input type="password">
+                <input type="password" required>
 
-                <button id="login-button">Login</button>
-                <a href="/esqueci-senha">Esqueci minha senha</a>
+                <button id="login-button" (click)="login($event)">Login</button>
+                <!-- <a href="/esqueci-senha">Esqueci minha senha</a> -->
             
             </form>
 
