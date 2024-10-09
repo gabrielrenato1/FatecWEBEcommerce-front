@@ -5,9 +5,10 @@
 
 .products-grid{
     display: grid;
-    grid-template-columns: auto auto auto auto;
-    gap: 70px 50px; 
-    margin: 30px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px 50px; 
+    margin: 30px auto;
+    width: 90%;
 }
 
 @media (orientation:portrait) {

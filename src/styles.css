@@ -11,7 +11,7 @@ body{
 }
 
 :root {
-    --primary-color: #000000;
+    --primary-color: #afafe9;
     --secondary-color: #ffffff;
     --primary-text-color: #ffffff;
 }
@@ -66,6 +66,6 @@ a{
 }
 
 a:hover{
-    color: #c2c2c2;
+    color: #dad9f3;
     transition: 0.25s;
 }

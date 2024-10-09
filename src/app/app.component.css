@@ -4,9 +4,13 @@ header{
     padding: 0px;
     div{
         width: 33.3%;
+        margin: 15px;
     }
     .header-logo{
         margin: auto auto auto 30px;
+        img{
+            width: 100px;
+        }
     }
     .header-seach{
         text-align: center;

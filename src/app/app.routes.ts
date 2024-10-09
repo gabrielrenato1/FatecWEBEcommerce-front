@@ -5,14 +5,14 @@ import { DetalheComponent } from './pages/detalhe/detalhe.component';
 import { EsqueciSenhaComponent } from './pages/esqueci-senha/esqueci-senha.component';
 import { LoginComponent } from './pages/login/login.component';
 import { PesquisaComponent } from './pages/pesquisa/pesquisa.component';
-import { VitrineComponent } from './pages/vitrine/vitrine.component';
+import { HomeComponent } from './pages/home/home.component';
 
 export const routes: Routes = [
-    {path:"", component:VitrineComponent},
+    {path:"", component:HomeComponent},
     {path:"login", component:LoginComponent},
     {path:"cadastro", component:CadastroComponent},
     {path:"esqueci-senha", component:EsqueciSenhaComponent},
-    {path:"vitrine", component:VitrineComponent},
+    {path:"home", component:HomeComponent},
     {path:"produto/:id", component:DetalheComponent},
     {path:"cesta", component:CestaComponent},
     {path:"pesquisa", component:PesquisaComponent},

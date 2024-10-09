@@ -1,4 +1,8 @@
+import { Router } from "@angular/router";
+
 export class Product {
+
+    // private router = new Router();
 
     public id:number = 0;
     public name:string = "";
@@ -32,6 +36,9 @@ export class Product {
         }
 
         localStorage.setItem("shoppingCart", JSON.stringify(arrProducts));
+        // this.router.navigateByUrl('/pagina2')
+        // this.router.navigateByUrl('/cesta')
+        window.location.href = '/cesta';
 
     }
 

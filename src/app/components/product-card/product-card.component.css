@@ -1,4 +1,8 @@
- .card-image{
+.card{
+    max-width: 25vw;
+}
+
+.card-image{
     text-align: center;
 }
 
@@ -6,15 +10,25 @@
     margin: 7px;
 }
 
+.actions{
+    display: flex;
+    width: fit-content;
+}
+
+.quantity-input{
+    width: 50px;
+}
+
  img{
-    width: 100%;
-    height: auto;
+    width: auto;
+    height: 180px;
     margin-top: 7px;
 } 
 
 .product-name{
-    font-size: 25px;
-    margin-bottom: 7px;
+    padding: 10px;
+    font-size: 20px;
+    margin-top: 20px;
     width: 100%;
 }
 
@@ -24,10 +38,9 @@ button{
 }
 
 .card-footer{
-
+    padding: 10px;
     display: flex;
     justify-content: space-between;
-    margin-top: auto;
     span{
         margin: auto 0px;
         font-size: 20px;

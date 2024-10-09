@@ -1,4 +1,7 @@
-
+.card{
+    max-width: 95vw;
+    margin: auto;
+}
 .card-image{
     width: 40%;
 }
@@ -13,6 +16,16 @@
     margin: 7px;
     display: flex;
 }
+
+.quantity-input{
+    width: 50px;
+}
+
+.actions{
+    display: flex;
+    width: fit-content;
+}
+
 
  img{
     width: 100%;

@@ -20,8 +20,13 @@
 
                 <div class="card-footer">
         
-                    <span>R$ {{product.price}}</span> <button (click)="product.addShoppingCart()"><i class="fa-solid fa-cart-plus"></i></button>
-        
+                    <span>R$ {{product.price}}</span>
+                
+                    <div class="actions">
+                        <input class="quantity-input" type="number" [(ngModel)]="product.quantity" value="1" min="1">
+                        <button (click)="product.addShoppingCart()"><i class="fa-solid fa-cart-plus"></i></button>
+                    </div>
+
                 </div>
             </div>
 

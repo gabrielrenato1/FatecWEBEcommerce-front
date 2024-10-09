@@ -2,10 +2,15 @@ import { Component } from '@angular/core';
 import { ProductCardComponent } from '../../components/product-card/product-card.component';
 import { Product } from '../../modals/product/product';
 import { ActivatedRoute } from '@angular/router';
+import { MockProducts } from '../../mock/products/mock-products';
+import { FormsModule } from '@angular/forms';
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+
 @Component({
   selector: 'app-detalhe',
   standalone: true,
-  imports: [ProductCardComponent],
+  imports: [ProductCardComponent, FormsModule],
   templateUrl: './detalhe.component.html',
   styleUrl: './detalhe.component.css'
 })
@@ -20,13 +25,8 @@ export class DetalheComponent {
      this.productId = params.get('id') || 0;
     });
 
-    this.product.id = parseInt(this.productId);
-    this.product.name = "Produto " + this.productId;
-    this.product.image = "https://placehold.co/1920x1200/000000/FFF?text=Foto Produto " + this.productId;
-    this.product.description = "Descrição do produto " + this.productId;
-    this.product.price = 100.00 * this.productId;
-    this.product.discount = 0.0;
-
+    this.product = new MockProducts().products[this.productId];
+    console.log(this.product);
   }
 
 }
