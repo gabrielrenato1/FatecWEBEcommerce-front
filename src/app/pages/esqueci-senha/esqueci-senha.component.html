@@ -1,3 +1,22 @@
-<div class="page-margin">
-    <p>esqueci-senha works!</p>
+<div class="page">
+    
+    <div class="card">
+        
+        <div class="form-side">
+            <h1>Esqueci senha</h1>
+
+
+            <form action="">
+
+                <span>Email</span>
+                <input type="text" name="email" [(ngModel)]="email" required>
+
+                <button id="login-button" (click)="recuperarSenha()">Login</button>
+                <p>{{message}}</p>
+            </form>
+
+        </div>
+
+    </div>
+
 </div>

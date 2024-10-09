@@ -36,8 +36,6 @@ export class Product {
         }
 
         localStorage.setItem("shoppingCart", JSON.stringify(arrProducts));
-        // this.router.navigateByUrl('/pagina2')
-        // this.router.navigateByUrl('/cesta')
         window.location.href = '/cesta';
 
     }

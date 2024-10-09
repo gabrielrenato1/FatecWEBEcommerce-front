@@ -16,14 +16,14 @@
             <form action="">
 
                 <span>Email</span>
-                <input type="text" required>
+                <input type="text" name="email" [(ngModel)]="email" required>
 
                 <span>Senha</span>
-                <input type="password" required>
+                <input type="password" [(ngModel)]="password" required>
 
-                <button id="login-button" (click)="login($event)">Login</button>
-                <!-- <a href="/esqueci-senha">Esqueci minha senha</a> -->
-            
+                <button id="login-button" (click)="login()">Login</button>
+                <a href="/esqueci-senha">Esqueci minha senha</a>
+                <p>{{message}}</p>
             </form>
 
         </div>

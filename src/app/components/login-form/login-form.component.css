@@ -25,6 +25,9 @@
             margin-bottom: 40px;
             width: 100%;
         }
+        p{
+            text-align: center;
+        }
     }
     a{
         margin: 0px auto;
