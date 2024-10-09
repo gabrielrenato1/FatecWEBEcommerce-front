@@ -1,2 +1,2 @@
-<login-form *ngIf="login === true"></login-form>
-<register-form *ngIf="login === false"></register-form>
+<login-form (toggleLogin)="toggleLogin($event)" *ngIf="login === true"></login-form>
+<register-form (toggleLogin)="toggleLogin($event)" *ngIf="login === false"></register-form>

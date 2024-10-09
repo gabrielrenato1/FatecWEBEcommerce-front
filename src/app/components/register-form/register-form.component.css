@@ -3,6 +3,19 @@
     margin-bottom: 5%;
 }
 
+.flex{
+
+    display: flex;
+    justify-content: space-evenly;
+    input {
+        width: 100% !important;
+    }
+    div{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
 .card{
     display: flex;
     min-width: fit-content;
@@ -17,6 +30,7 @@
     width: 60%;
     height: fit-content;
     margin: auto;
+    border-left: solid 1px;
     
     form{
         display: grid;

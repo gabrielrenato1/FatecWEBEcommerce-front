@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'register-form',
@@ -8,5 +8,11 @@ import { Component } from '@angular/core';
   styleUrl: './register-form.component.css'
 })
 export class RegisterFormComponent {
+
+  @Output() toggleLogin = new EventEmitter<boolean>;
+
+  public disableRegister(){
+    this.toggleLogin.emit(true)
+  }
 
 }
