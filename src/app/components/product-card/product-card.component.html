@@ -1,31 +1,30 @@
 
 <div class="card">
 
-    <div class="card-content">
+    <div class="card-image">
+        <a href="/produto/{{inputProduct.id}}">
+            <img src="{{inputProduct.image}}" alt="">
+        </a>
+    </div>
 
-        <div class="card-image">
-            <a href="/produto/{{inputProduct.id}}">
-                <img src="{{inputProduct.image}}" alt="">
-            </a>
+    <div>
+
+        <div class="product-name">
+            {{inputProduct.name}}
         </div>
 
-        <div>
-            <div class="product-name">
-                {{inputProduct.name}}
-            </div>
-    
-            <div class="card-footer">
-                
+        <div class="card-footer">
+            
+            <div>
                 <span>{{inputProduct.price.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}}</span>
-                
-                <div class="actions">
-                    <input class="quantity-input" type="number" [(ngModel)]="inputProduct.quantity" value="1" min="1">
-                    <button (click)="inputProduct.addShoppingCart()"><i class="fa-solid fa-cart-plus"></i></button>
-                </div>
-    
             </div>
-        </div>
+            
+            <div class="add-product">
+                <input class="input" type="number" [(ngModel)]="inputProduct.quantity" value="1" min="1">
+                <button (click)="inputProduct.addShoppingCart()"><i class="fa-solid fa-cart-plus"></i></button>
+            </div>
 
+        </div>
     </div>
 
 </div>
