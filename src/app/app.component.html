@@ -1,37 +1,40 @@
-
 <div class="page-container">
-
-    <header>
-
-        <div  class="header-logo">
-            <a href="/">
-                <img src="logo.png" alt="">
-            </a>
-        </div>
-
-        <div class="header-seach">
-            <input type="text" placeholder="Pesquise por um produto"><button><i class="fa-solid fa-magnifying-glass"></i></button>
-        </div>
-
-        <div  class="header-profile">
-            <i class="fa-solid fa-user profile"></i>
-        </div>
-
-    </header>
-
+    
     <nav>
-        <a href="/">Home</a>
-        <a href="login">Login</a>
-        <a href="cesta">Cesta</a>
+
+        <div class="margin">
+
+            <div class="logo">
+                <img src="logo.png" alt="">
+            </div>
+
+            <hr>
+
+            <div class="search-product">
+                <div class="add-product">
+                    <input type="text" placeholder="Procure algum produto">
+                    <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+            </div>
+
+            <div class="navigation">
+                <a href="/"><div class="nav-item">Home</div></a>
+                <a href="cesta"><div class="nav-item">Cesta</div></a>
+                <a href="login"><div class="nav-item">Login</div></a>
+            </div>
+
+        </div>
+
+        <div class="profile">
+            <hr>
+            <i class="fa-solid fa-user profile-icon"></i>
+            <span>José Carlos</span>
+        </div>
+
     </nav>
 
     <div class="content-wrap">
         <router-outlet />
     </div>
-
-
-    <footer>
-        <a href="https://github.com/gabrielrenato1">Gabriel Carvalho</a> - ADS Noturno - 2024
-    </footer>
 
 </div>
