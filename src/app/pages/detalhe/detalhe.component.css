@@ -3,11 +3,11 @@
     margin: auto;
 }
 .card-image{
-    width: 40%;
+    width: 20%;
 }
 
 .card-text{
-    width: 60%;
+    width: 80%;
     padding: 20px;
     position: relative;
 }
@@ -26,16 +26,16 @@
     width: fit-content;
 }
 
-
  img{
     width: 100%;
     height: auto;
     margin: 7px auto;
-} 
+}
 
 .product-name{
     font-size: 25px;
     width: 100%;
+    margin-bottom: 20px;
     max-height: 20%;
 }
 
@@ -54,6 +54,26 @@ button{
     span{
         margin: auto 0px;
         font-size: 20px;
+    }
+
+}
+
+.add-product{
+
+    display: flex;
+
+    .input{
+        width: 50px;
+        height: 67%;
+        border-radius: 8px 0px 0px 8px;
+    }
+    
+    button{
+        width: 55px;
+        height: 100%;
+        font-size: 16px;
+        border-radius: 0px 8px 8px 0px;
+        border-color:  var(--primary-color);
     }
 
 }

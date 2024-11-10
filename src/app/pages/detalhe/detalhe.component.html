@@ -15,6 +15,7 @@
                 </div>
 
                 <div class="">
+                    <b>Descrição:</b> <br>
                     {{product.description}}
                 </div>
 
@@ -22,8 +23,8 @@
         
                     <span>{{product.price.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}}</span>
                 
-                    <div class="actions">
-                        <input class="quantity-input" type="number" [(ngModel)]="product.quantity" value="1" min="1">
+                    <div class="add-product">
+                        <input class="input" type="number" [(ngModel)]="product.quantity" value="1" min="1">
                         <button (click)="product.addShoppingCart()"><i class="fa-solid fa-cart-plus"></i></button>
                     </div>
 

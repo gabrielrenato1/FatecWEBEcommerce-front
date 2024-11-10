@@ -5,6 +5,7 @@
 .content-wrap{
     width: 85vw;
     margin-left: 15vw;
+    margin-top: 30px;
     transition: 0.35s;
 }
 
@@ -128,7 +129,6 @@ nav{
         width: 100vw;
         margin-left: 0vw;
         transition: 0.35s;
-        margin-top: 10vh;
     }
 
 }
