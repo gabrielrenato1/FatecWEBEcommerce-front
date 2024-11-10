@@ -16,7 +16,7 @@
                     <input class="quantity-input" type="number" min="1" value="{{product.quantity}}" (blur)="updateProducts(product.id, $event)">Qtde.
                 </div>
                 <div id="productPrice">
-                    R${{product.price * product.quantity}}
+                    {{(product.price * product.quantity).toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}}
                 </div>
                 <div id="removeProduct">
                     <button (click)="removeProducts(product.id)"><i class="fa-solid fa-trash"></i></button>
@@ -41,7 +41,7 @@
             <a href="/"><button class="btn-secondary">Voltar a comprar</button></a>
         </div>
         <div id="price">
-            <span>Total: R$ {{totalPrice}}</span> 
+            <span>Total: {{totalPrice.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}}</span> 
         </div>
         
     </div>

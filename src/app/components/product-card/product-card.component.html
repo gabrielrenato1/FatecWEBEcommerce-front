@@ -16,7 +16,7 @@
     
             <div class="card-footer">
                 
-                <span>R$ {{inputProduct.price}}</span>
+                <span>{{inputProduct.price.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}}</span>
                 
                 <div class="actions">
                     <input class="quantity-input" type="number" [(ngModel)]="inputProduct.quantity" value="1" min="1">
