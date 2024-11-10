@@ -4,6 +4,7 @@
 
 .content-wrap{
     width: 85vw;
+    margin-left: 15vw;
 }
 
 nav{
@@ -14,6 +15,7 @@ nav{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    position: fixed;
 
     .margin{
         margin: 20px;
