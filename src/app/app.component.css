@@ -5,10 +5,12 @@
 .content-wrap{
     width: 85vw;
     margin-left: 15vw;
+    transition: 0.35s;
 }
 
 nav{
 
+    transition: 0.35s;
     width: 15vw;
     height: 100vh;
     background-color: var(--primary-color);
@@ -16,6 +18,19 @@ nav{
     flex-direction: column;
     justify-content: space-between;
     position: fixed;
+
+    #toggle-menu{
+        position: absolute;
+        left: 15.5vw;
+        top: 1vh;
+        font-size: 25px;
+        width: fit-content;
+        height: fit-content;
+    }
+
+    #toggle-menu:hover{
+        cursor: pointer;
+    }
 
     .margin{
         margin: 20px;
@@ -91,6 +106,29 @@ nav{
         font-size: 16px;
         border-radius: 0px 8px 8px 0px;
         border-color:  var(--secondary-color);
+    }
+
+}
+
+@media (orientation:portrait){
+
+    nav{
+
+        width: 85vw;
+
+        #toggle-menu{
+            left: 87vw;
+            top: 1vh;
+            font-size: 35px;
+        }
+
+    }
+
+    .content-wrap{
+        width: 100vw;
+        margin-left: 0vw;
+        transition: 0.35s;
+        margin-top: 10vh;
     }
 
 }

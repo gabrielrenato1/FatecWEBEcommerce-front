@@ -1,9 +1,5 @@
-.card{
-    max-width: 25vw;
-    padding: 7px;
-}
-
 .card-image{
+    margin: 7px;
     text-align: center;
     img{
         width: 100%;
@@ -35,25 +31,18 @@
 }
 
 .product-name{
-    font-size: 20px;
-    margin: 10px auto;
+    font-size: 18px;
+    margin: 10px 7px;
 }
 
 .card-footer{
+    margin: 7px;
     align-items: center;
     display: flex;
     justify-content: space-between;
     height: 50px;
     span{
         font-size: 20px;
-    }
-
-}
-
-@media (orientation:portrait) {
-
-    .card{
-        max-width: 100vw;
     }
 
 }

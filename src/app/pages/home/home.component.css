@@ -14,5 +14,9 @@
 @media (orientation:portrait) {
     .products-grid{
         grid-template-columns: auto;
+        width: 80vw;
+        margin: auto;
+
+
     }
 }

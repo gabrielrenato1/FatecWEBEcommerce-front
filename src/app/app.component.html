@@ -25,6 +25,8 @@
 
         </div>
 
+        <i class="fa-solid fa-bars" (click)="toggleMenu()" id="toggle-menu"></i>
+
         <div class="profile">
             <hr>
             <i class="fa-solid fa-user profile-icon"></i>
@@ -33,7 +35,7 @@
 
     </nav>
 
-    <div class="content-wrap">
+    <div class="content-wrap" id="content-wrap">
         <router-outlet />
     </div>
 
