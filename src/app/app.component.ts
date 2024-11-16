@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Router, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -12,6 +12,7 @@ export class AppComponent {
   title = 'project';
   isOpenMenu = false;
 
+  constructor(private router:Router){}
    toggleMenu(){
 
     var navItem = document.querySelector("nav");
@@ -32,4 +33,13 @@ export class AppComponent {
     }
 
   }
+
+  searchProduct(){
+    var searchInput = "tes";
+    // this.router.navigate(['/','resultados']);
+    // this.router.navigate(['/resultados', {queryParams:{pesquisa:searchInput}}]);
+    // this.router.navigateByUrl('resultados?tes=tes');
+    // window.location.replace("/resultados?pesquisa=tes");
+  }
+
 }

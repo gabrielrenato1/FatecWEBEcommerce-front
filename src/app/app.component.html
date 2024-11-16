@@ -12,8 +12,10 @@
 
             <div class="search-product">
                 <div class="add-product">
-                    <input type="text" placeholder="Procure algum produto">
-                    <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                    <form action=""> 
+                        <!-- <input type="text" placeholder="Procure algum produto" [(ngModel)]="search"> -->
+                        <button><i class="fa-solid fa-magnifying-glass" (click)="searchProduct()"></i></button>
+                    </form>
                 </div>
             </div>
 

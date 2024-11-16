@@ -15,17 +15,12 @@ import { ProdutoService } from '../../service/produtoService/produto-service';
 })
 export class HomeComponent {
 
-  public items:any = null;
+  public items:Product[] = [];
 
   constructor(private produtoService: ProdutoService){
 
      this.produtoService.list().subscribe({
       next:(data)=>{
-
-        for (let index = 0; index < data.length; index++) {
-          data[index] = Object.assign(new Product(), data[index]) 
-        }
-
         this.items = data;
       },
       error:(err)=>{

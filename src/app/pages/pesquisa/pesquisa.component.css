@@ -1,0 +1,23 @@
+
+.page{
+    margin: auto;
+}
+
+.products-grid{
+    gap: 50px 50px; 
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 3 colunas, com tamanho proporcional */
+    grid-template-rows: auto;
+    margin: 30px auto;
+    width: 90%;
+}
+
+@media (orientation:portrait) {
+    .products-grid{
+        grid-template-columns: auto;
+        width: 80vw;
+        margin: auto;
+
+
+    }
+}
