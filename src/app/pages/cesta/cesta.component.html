@@ -1,11 +1,10 @@
 <div class="page-margin">
     
-    <div class="shoppingCart card">
+    <div class="shoppingCart card" id="shoppingCart-card">
 
         <div *ngIf="products.length > 0">
 
             <div *ngFor="let product of products" class="cartRow">
-                 <!-- TODO: Revisar imagem -->
                 <div id="productImage">
                     <img src="{{product.image}}" alt="">
                 </div>
@@ -34,7 +33,7 @@
 
     </div>
 
-    <div class="actions card">
+    <div class="actions card" id="actions-card">
 
         <div>
             <button (click)="sendOrder()">Efetuar compra</button>

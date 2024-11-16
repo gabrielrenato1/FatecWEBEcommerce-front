@@ -13,6 +13,16 @@
     }
 }
 
+#actions-card{
+    border-radius: 0px 0px 5px 5px;
+}
+
+#shoppingCart-card{
+    border-bottom: none;
+    border-radius: 5px 5px 0px 0px;
+    height: 80vh;
+}
+
 #emptyState{
     text-align: center;
     height: fit-content;
@@ -41,7 +51,6 @@
     justify-content: space-between;
     border-bottom: solid 0.5px;
     padding: 15px;
-    height: 100px;
 
     div{
         margin-top: auto;
@@ -51,17 +60,21 @@
 }
 
 #productImage{
-    width: 15%;
+    /* width: 15%; */
+    height: 125px;
 
     img{
-        height: 100px;
         width: 100%;
+        height: 100%;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
     }
 
 }
 
 #productName{
-    width: 45%;
+    width: 30%;
+    overflow-wrap: break-word;
 }
 
 #productQuantity{
@@ -69,11 +82,11 @@
 }
 
 #productPrice{
-    width: 10%;
+    width: 20%;
 }
 
 #removeProduct{
-    width: 5%;
+    width: fit-content;
     button{
         width: 50px;
         height: 50px;
