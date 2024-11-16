@@ -17,8 +17,8 @@ export class ProdutoService {
         return this.http.get("http://localhost:8080/api/produto/" + id);
     }
 
-    search(id:any): Observable<any>{
-        return this.http.get("http://localhost:8080/api/produto/pesquisar?pesquisa" + id);
+    search(inputSearch:any): Observable<any>{
+        return this.http.get("http://localhost:8080/api/produtos/busca?pesquisa=" + inputSearch);
     }
 
 }

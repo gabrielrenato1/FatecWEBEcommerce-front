@@ -4,12 +4,11 @@
 }
 
 .products-grid{
-    gap: 50px 50px; 
+    gap: 25px 50px;
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 3 colunas, com tamanho proporcional */
+    grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto;
     margin: 30px auto;
-    width: 90%;
 }
 
 @media (orientation:portrait) {

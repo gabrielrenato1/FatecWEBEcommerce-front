@@ -1,16 +1,18 @@
 import { Component } from '@angular/core';
 import { Router, RouterOutlet } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, FormsModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
   title = 'project';
   isOpenMenu = false;
+  public inputSearch:string = "";
 
   constructor(private router:Router){}
    toggleMenu(){
@@ -35,11 +37,10 @@ export class AppComponent {
   }
 
   searchProduct(){
-    var searchInput = "tes";
-    // this.router.navigate(['/','resultados']);
-    // this.router.navigate(['/resultados', {queryParams:{pesquisa:searchInput}}]);
-    // this.router.navigateByUrl('resultados?tes=tes');
-    // window.location.replace("/resultados?pesquisa=tes");
+    if(this.inputSearch != ""){
+      console.log(this.inputSearch);
+      this.router.navigateByUrl('resultados?pesquisa='+this.inputSearch);
+    }
   }
 
 }

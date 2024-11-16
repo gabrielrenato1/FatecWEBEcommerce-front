@@ -4,11 +4,11 @@
 }
 
 .products-grid{
+    gap: 25px 50px;
     display: grid;
-    gap: 50px 50px; 
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
     margin: 30px auto;
-    width: 90%;
 }
 
 @media (orientation:portrait) {

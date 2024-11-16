@@ -24,24 +24,19 @@ export class PesquisaComponent {
 
     var searchQuery = null;
 
-    this.route.queryParams.subscribe(function(data){
+    this.route.queryParams.subscribe((data) =>{
       searchQuery = data?.['pesquisa'];
+        this.productService.search(searchQuery).subscribe({
+          next:(data)=>{
+            this.items = data;
+          },
+          error:(err)=>{
+              console.log(err);
+          }
+      })
     })
 
-    // if(searchQuery !== null){
-    //   this.productService.search(searchQuery).subscribe({
-    //     next:(data)=>{
-    //       this.items = data;
-    //     },
-    //     error:(err)=>{
-    //         console.log(err);
-    //     }
-    //   })
-    // }
-
-    this.items = new MockProducts().products;
-
-    console.log(this.items);
+    
 
   }
 
