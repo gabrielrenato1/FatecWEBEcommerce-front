@@ -10,26 +10,6 @@
     
 }
 
-.add-product{
-
-    display: flex;
-
-    .input{
-        width: 50px;
-        height: 100%;
-        border-radius: 8px 0px 0px 8px;
-    }
-    
-    button{
-        width: 55px;
-        height: 100%;
-        font-size: 16px;
-        border-radius: 0px 8px 8px 0px;
-        border-color:  var(--primary-color);
-    }
-
-}
-
 .product-name{
     font-size: 18px;
     margin: 10px 7px;
