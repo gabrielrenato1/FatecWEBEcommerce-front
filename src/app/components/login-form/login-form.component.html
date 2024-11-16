@@ -10,8 +10,8 @@
         </div>
 
         <div class="form-side">
+            
             <h1>Já tenho cadastro</h1>
-
 
             <form action="">
 
@@ -19,7 +19,7 @@
                 <input type="text" name="email" [(ngModel)]="email" required>
 
                 <span>Senha</span>
-                <input type="password" [(ngModel)]="password" required>
+                <input type="password" name="password" [(ngModel)]="password" required>
 
                 <button id="login-button" (click)="login()">Login</button>
                 <a href="/esqueci-senha">Esqueci minha senha</a>
