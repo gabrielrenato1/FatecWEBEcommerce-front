@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Product } from '../../modals/product/product';
 import { Order } from '../../modals/order/order';
+import { Users } from '../../modals/users/users';
 
 @Component({
   selector: 'app-cesta',
@@ -55,17 +56,41 @@ export class CestaComponent {
 
   public sendOrder(){
 
-    if(this.products.length > 0){
+    var localUser = localStorage.getItem("auth-user")??null;
 
-      var order = new Order();
-      order.setProducts(this.products);
+    if(localUser != null){
 
-      localStorage.setItem("shoppingCart", "[]");
-      this.products = JSON.parse(localStorage.getItem("shoppingCart")??"[]");
-      
-      this.calculateTotalPrice();
-      console.log(order);
+      if(this.products.length > 0){
+
+        var user = new Users();
+        var order = new Order();
+
+        user = JSON.parse(localUser);
+
+        order.setProducts(this.products);
+        order.user_id = user.id;
+        localStorage.setItem("shoppingCart", "[]");
+        this.products = JSON.parse(localStorage.getItem("shoppingCart")??"[]");
+        
+        this.calculateTotalPrice();
+
+
+
+      }else{
+
+        console.log("Adicione itens no carrinho");
+
+      }
+
+
+    }else{
+
+      console.log("Login para continuar");
+
     }
+
+    
+    
 
   }
 

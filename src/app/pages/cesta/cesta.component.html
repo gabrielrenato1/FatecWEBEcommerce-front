@@ -25,22 +25,16 @@
 
         </div>
 
-        <div *ngIf="products.length == 0" id="emptyState">
-
-            <span>Cesta vazia :^(</span>
-
-        </div>
-
     </div>
 
     <div class="actions card" id="actions-card">
 
-        <div>
-            <button (click)="sendOrder()">Efetuar compra</button>
-            <a href="/"><button class="btn-secondary">Voltar a comprar</button></a>
-        </div>
         <div id="price">
             <span>Total: {{totalPrice.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}}</span> 
+        </div>
+        <div>
+            <a href="/"><button class="btn-secondary">Voltar a comprar</button></a>
+            <button (click)="sendOrder()">Efetuar compra</button>
         </div>
         
     </div>

@@ -1,20 +1,35 @@
 import { Component } from '@angular/core';
 import { Router, RouterOutlet } from '@angular/router';
 import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
+import { Users } from './modals/users/users';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, FormsModule],
+  imports: [RouterOutlet, FormsModule, CommonModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
   title = 'project';
   isOpenMenu = false;
+  public user:Users = new Users;
   public inputSearch:string = "";
 
-  constructor(private router:Router){}
+  constructor(private router:Router){
+
+    this.setUser();
+
+  }
+
+  setUser(){
+
+    var user = localStorage.getItem("auth-user")??null;
+    this.user = (user != null) ? JSON.parse(user) : new Users;
+
+  }
+
    toggleMenu(){
 
     var navItem = document.querySelector("nav");
@@ -38,9 +53,19 @@ export class AppComponent {
 
   searchProduct(){
     if(this.inputSearch != ""){
-      console.log(this.inputSearch);
       this.router.navigateByUrl('resultados?pesquisa='+this.inputSearch);
     }
+  }
+
+  logout(){
+
+    var user = localStorage.getItem("auth-user")??null;
+
+    if(user != null){
+      localStorage.removeItem("auth-user");
+      this.setUser()
+    }
+    
   }
 
 }

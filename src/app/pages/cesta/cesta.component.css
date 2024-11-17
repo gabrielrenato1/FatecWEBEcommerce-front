@@ -2,7 +2,6 @@
     display: flex;
     margin: auto auto auto auto;
     justify-content: space-between;
-    width: 75%;
 
     div{
         margin: 20px;
@@ -40,7 +39,6 @@
 
 .shoppingCart{
     margin: auto;
-    width: 75%;
     height: 65vh;
     overflow-y: auto;
     border: solid 0.5px;
@@ -60,7 +58,6 @@
 }
 
 #productImage{
-    /* width: 15%; */
     height: 125px;
 
     img{

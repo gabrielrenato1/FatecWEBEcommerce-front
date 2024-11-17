@@ -73,7 +73,6 @@ nav{
     .profile{
         margin: 20px;
         background-color: var(--primary-color);
-        text-align: center;
         .profile-icon{
             background: var(--secondary-color);
             color: var(--primary-color);
