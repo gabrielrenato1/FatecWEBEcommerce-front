@@ -5,6 +5,7 @@ import { EsqueciSenhaComponent } from './pages/esqueci-senha/esqueci-senha.compo
 import { LoginComponent } from './pages/login/login.component';
 import { PesquisaComponent } from './pages/pesquisa/pesquisa.component';
 import { HomeComponent } from './pages/home/home.component';
+import { PedidosComponent } from './pages/pedidos/pedidos.component';
 
 export const routes: Routes = [
     {path:"", component:HomeComponent},
@@ -14,4 +15,5 @@ export const routes: Routes = [
     {path:"produto/:id", component:DetalheComponent},
     {path:"cesta", component:CestaComponent},
     {path:"resultados", component:PesquisaComponent},
+    {path:"pedidos", component:PedidosComponent},
 ];

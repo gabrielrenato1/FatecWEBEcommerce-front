@@ -3,7 +3,10 @@ import { CommonModule } from '@angular/common';
 import { Product } from '../../modals/product/product';
 import { Order } from '../../modals/order/order';
 import { Users } from '../../modals/users/users';
+import { PedidoService } from '../../service/pedidoService/pedido-service';
+import { Item
 
+ } from '../../modals/item/item';
 @Component({
   selector: 'app-cesta',
   standalone: true,
@@ -13,10 +16,11 @@ import { Users } from '../../modals/users/users';
 })
 export class CestaComponent {
 
-  public products:Array<any> = JSON.parse(localStorage.getItem("shoppingCart")??"[]");
+  public products:Array<Product> = JSON.parse(localStorage.getItem("shoppingCart")??"[]");
   public totalPrice:number = 0;
+  public message:String = "";
   
-  constructor(){
+  constructor(private orderService:PedidoService){
     this.calculateTotalPrice();
   }
 
@@ -68,24 +72,56 @@ export class CestaComponent {
         user = JSON.parse(localUser);
 
         order.setProducts(this.products);
-        order.user_id = user.id;
-        localStorage.setItem("shoppingCart", "[]");
-        this.products = JSON.parse(localStorage.getItem("shoppingCart")??"[]");
-        
-        this.calculateTotalPrice();
+        order.cliente_id = user.id;
+        order.total = this.totalPrice;
 
+        this.orderService.createOrder(order).subscribe({
+          next:(data) => {
+              
+              var items:Array<Item> = [];
 
+              this.products.map(function(product){
+                
+                var item = new Item();
+                item.cesta_id = data.codigo;
+                item.produto_id = product.id;
+                item.quantidade = product.quantity;
+                item.valor = product.price;
+
+                items.push(item);
+
+              });
+
+              this.orderService.createItems(items).subscribe({
+                next:(data) => {
+                  
+                  localStorage.removeItem("shoppingCart");
+                  this.products = [];
+                  this.calculateTotalPrice();
+                  this.message = "Pedido criado!";
+    
+                },
+                error:(error) => {
+                  this.message = "Algo deu errado durante a crição do pedido!";
+                }
+              })
+
+          },
+          error:(error) => {
+            this.message = "Algo deu errado ao criar o pedido!";
+          }
+        });
 
       }else{
 
-        console.log("Adicione itens no carrinho");
+        this.message = "Adicione itens no carrinho!";
 
       }
 
 
     }else{
 
-      console.log("Login para continuar");
+      this.message = "Login para continuar!";
 
     }
 

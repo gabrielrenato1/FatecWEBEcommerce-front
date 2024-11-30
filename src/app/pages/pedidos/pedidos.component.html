@@ -1,0 +1,21 @@
+<div class="page-margin">
+    
+    <div class="shoppingCart card" id="shoppingCart-card">
+
+        <div *ngIf="orders.length > 0">
+
+            <div *ngFor="let order of orders" class="cartRow">
+                <div id="productCode">
+                    #{{order.codigo}}
+                </div>
+                <div id="productPrice">
+                    {{(order.total).toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}}
+                </div>
+    
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

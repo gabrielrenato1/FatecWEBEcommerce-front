@@ -35,13 +35,17 @@ export class LoginFormComponent {
 
     this.userService.login(user).subscribe({
       next:(data)=>{
-        localStorage.setItem("auth-user", JSON.stringify(data));
-        window.location.href = '/';
+        if(data === null){
+          this.message = "Usuário ou senha não válidos"; 
+        }else{
+          localStorage.setItem("auth-user", JSON.stringify(data));
+          window.location.href = '/';
+        }
       },
       error:(err)=>{
         this.message = "Usuário ou senha não válidos"; 
       }
-    })
+    });
 
   }
 

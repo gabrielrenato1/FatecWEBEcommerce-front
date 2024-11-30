@@ -2,8 +2,9 @@ import { Product } from "../product/product";
 
 export class Order {
 
-    public id:number = 0;
-    public user_id:number = 0;
+    public codigo:number = 0;
+    public cliente_id:number = 0;
+    public total:number = 0;
     public products:Array<Product> = [];
 
     public setProducts(shoppingCartProducts:any){

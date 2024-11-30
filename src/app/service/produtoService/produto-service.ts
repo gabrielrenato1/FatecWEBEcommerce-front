@@ -10,7 +10,7 @@ export class ProdutoService {
     constructor(private http : HttpClient) { }
 
     list(): Observable<any>{
-        return this.http.get("http://localhost:8080/api/produtos");
+        return this.http.get("http://localhost:8080/api/produto");
     }
 
     show(id:any): Observable<any>{
@@ -18,7 +18,7 @@ export class ProdutoService {
     }
 
     search(inputSearch:any): Observable<any>{
-        return this.http.get("http://localhost:8080/api/produtos/busca?pesquisa=" + inputSearch);
+        return this.http.get("http://localhost:8080/api/produto/busca?pesquisa=" + inputSearch);
     }
 
 }
