@@ -7,11 +7,12 @@ import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { ProdutoService } from '../../service/produtoService/produto-service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-detalhe',
   standalone: true,
-  imports: [ProductCardComponent, FormsModule],
+  imports: [ProductCardComponent, FormsModule, CommonModule],
   templateUrl: './detalhe.component.html',
   styleUrl: './detalhe.component.css'
 })
@@ -26,7 +27,6 @@ export class DetalheComponent {
      this.productId = params.get('id') || 0;
     });
 
-
     productService.show(this.productId).subscribe({
       next:(data)=>{
         this.product =  Object.assign(new Product(), data);
@@ -36,6 +36,10 @@ export class DetalheComponent {
       }
     });
 
+  }
+
+  onSelectChange(event: any) {
+    this.product.quantity = event.target.value;
   }
 
 }

@@ -17,9 +17,6 @@
     display: flex;
 }
 
-.quantity-input{
-    width: 50px;
-}
 
 .actions{
     display: flex;
@@ -63,8 +60,7 @@ button{
     display: flex;
 
     .input{
-        width: 50px;
-        height: 67%;
+        font-size: 16px;
         border-radius: 8px 0px 0px 8px;
     }
     
