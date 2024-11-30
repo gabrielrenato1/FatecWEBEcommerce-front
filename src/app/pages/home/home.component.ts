@@ -5,27 +5,34 @@ import { CommonModule } from '@angular/common';
 import { Product } from '../../modals/product/product';
 import { MockProducts } from '../../mock/products/mock-products';
 import { ProdutoService } from '../../service/produtoService/produto-service';
+import { LoadingComponent } from '../../components/loading/loading.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [ProductCardComponent, CommonModule],
+  imports: [ProductCardComponent, CommonModule, LoadingComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
 
   public items:Product[] = [];
+  public loading:boolean = false;
 
   constructor(private produtoService: ProdutoService){
-
-     this.produtoService.list().subscribe({
-      next:(data)=>{
+    
+    this.loading = true;
+    
+    this.produtoService.list().subscribe({
+      next:(data) => {
         this.items = data;
       },
-      error:(err)=>{
+      error:(err) => {
           console.log(err);
-      }
+      },
+      complete:() => {
+        this.loading = false;  
+      },
     });
 
   }

@@ -4,13 +4,13 @@ import { Product } from '../../modals/product/product';
 import { Order } from '../../modals/order/order';
 import { Users } from '../../modals/users/users';
 import { PedidoService } from '../../service/pedidoService/pedido-service';
-import { Item
+import { Item } from '../../modals/item/item';
+import { LoadingComponent } from '../../components/loading/loading.component';
 
- } from '../../modals/item/item';
 @Component({
   selector: 'app-cesta',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, LoadingComponent],
   templateUrl: './cesta.component.html',
   styleUrl: './cesta.component.css'
 })
@@ -19,6 +19,7 @@ export class CestaComponent {
   public products:Array<Product> = JSON.parse(localStorage.getItem("shoppingCart")??"[]");
   public totalPrice:number = 0;
   public message:String = "";
+  public loading:boolean = false;
   
   constructor(private orderService:PedidoService){
     this.calculateTotalPrice();
@@ -60,6 +61,7 @@ export class CestaComponent {
 
   public sendOrder(){
 
+    this.loading = true;
     var localUser = localStorage.getItem("auth-user")??null;
 
     if(localUser != null){
@@ -125,8 +127,7 @@ export class CestaComponent {
 
     }
 
-    
-    
+    this.loading = false;
 
   }
 

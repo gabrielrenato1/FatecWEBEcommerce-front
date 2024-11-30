@@ -5,11 +5,12 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { Users } from '../../modals/users/users';
 import { UserService } from '../../service/userService/user-service';
+import { LoadingComponent } from '../loading/loading.component';
 
 @Component({
   selector: 'login-form',
   standalone: true,
-  imports: [LoginComponent, FormsModule],
+  imports: [LoginComponent, FormsModule, LoadingComponent],
   templateUrl: './login-form.component.html',
   styleUrl: './login-form.component.css'
 })
@@ -19,6 +20,7 @@ export class LoginFormComponent {
   public email:string = "";
   public password:string = "";
   public message:any = null;
+  public loading:boolean = false;
   
   constructor(private userService:UserService){}
 
@@ -27,6 +29,8 @@ export class LoginFormComponent {
   }
 
   public login(){
+
+    this.loading = true;
 
     var user = new Users();
     
@@ -46,6 +50,8 @@ export class LoginFormComponent {
         this.message = "Usuário ou senha não válidos"; 
       }
     });
+
+    this.loading = false;
 
   }
 
