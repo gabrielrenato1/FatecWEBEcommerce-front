@@ -1,43 +1,7 @@
 <div class="page-container">
     
-    <nav>
-
-        <div class="margin">
-
-            <div class="logo">
-                <img src="logo.png" alt="">
-            </div>
-
-            <hr>
-
-            <div class="search-product">
-                <form action=""> 
-                    <input type="text" name="inputSearch" [(ngModel)]="inputSearch" placeholder="Buscar produto">
-                    <button (click)="searchProduct()"><i class="fa-solid fa-magnifying-glass"></i></button>
-                </form>
-            </div>
-
-            <div class="navigation">
-                <a href="/"><div class="nav-item">Home</div></a>
-                <a href="cesta"><div class="nav-item">Cesta</div></a>
-                <a href="cesta"><div class="nav-item">Produtos</div></a>
-                <a href="login" *ngIf="user.email.length == 0"><div class="nav-item">Login</div></a>
-                <a href="pedidos" *ngIf="user.email.length != 0"><div class="nav-item">Pedidos</div></a>
-                <a *ngIf="user.email.length != 0" (click)="logout()"><div class="nav-item">Desconectar</div></a>
-            </div>
-
-        </div>
-
-        <i class="fa-solid fa-bars" (click)="toggleMenu()" id="toggle-menu"></i>
-
-        <div class="profile">
-            <hr>
-            <i class="fa-solid fa-user profile-icon"></i>
-            <span>{{user.name}}</span>
-        </div>
-
-    </nav>
-
+    <app-navbar></app-navbar>
+    
     <div class="content-wrap" id="content-wrap">
         <router-outlet />
     </div>
