@@ -15,7 +15,7 @@
 
 #shoppingCart-card{
     border-radius: 5px;
-    height: 80vh;
+    /* height: 80vh; */
 }
 
 #emptyState{
@@ -35,7 +35,7 @@
 
 .shoppingCart{
     margin: auto;
-    height: 65vh;
+    /* height: 65vh; */
     overflow-y: auto;
     border: solid 0.5px;
 }

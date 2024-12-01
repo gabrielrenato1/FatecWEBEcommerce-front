@@ -1,10 +1,10 @@
 <div class="page-margin">
     
-    <div class="shoppingCart card" id="shoppingCart-card">
+    <div class="card">
 
-        <div *ngIf="products.length > 0">
-
-            <div *ngFor="let product of products" class="cartRow">
+        <div *ngIf="products.length > 0" id="products">
+            
+            <div *ngFor="let product of products" class="cardRow">
                 <div id="productImage">
                     <img src="{{product.image}}" alt="">
                 </div>
@@ -25,21 +25,21 @@
 
         </div>
 
-    </div>
-    <div>
-        {{message}}
-    </div>
-    <div class="actions card" id="actions-card">
+        <div class="actions">
+            <div id="price">
+                <span>Total: {{totalPrice.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}}</span> 
+            </div>
+            <div class="actions-buttons">
+                <a href="/"><button class="btn-secondary">Voltar a comprar</button></a>
+                <button (click)="sendOrder()">Efetuar compra</button>
+            </div>
+        </div>
 
-        <div id="price">
-            <span>Total: {{totalPrice.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}}</span> 
-        </div>
-        <div>
-            <a href="/"><button class="btn-secondary">Voltar a comprar</button></a>
-            <button (click)="sendOrder()">Efetuar compra</button>
-        </div>
-        
     </div>
+    
+    <!-- <div>
+        {{message}}
+    </div> -->
 
     <app-loading *ngIf="loading"></app-loading>
 

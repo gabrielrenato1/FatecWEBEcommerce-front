@@ -4,8 +4,8 @@
 
 .content-wrap{
     width: 85vw;
+    height: 100%;
     margin-left: 15vw;
-    margin-top: 30px;
     transition: 0.35s;
 }
 

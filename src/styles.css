@@ -1,13 +1,13 @@
 body{
     margin: 0px!important;
     padding: 0px!important;
-    /* width: 100vw; */
     background-color: #f1f1f1;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .page-margin{
-    margin: 15px 15px;
+    height: 92.5vh;
+    margin: 35px;
 }
 
 :root {
@@ -18,7 +18,6 @@ body{
 
 input{
     padding: 10px 0px 10px 10px;
-    width: 80%;
     height: 35px;
     border-radius: 8px;
     background-color: #ffffff;

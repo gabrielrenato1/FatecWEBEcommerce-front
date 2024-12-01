@@ -1,2 +1,4 @@
-<login-form (toggleLogin)="toggleLogin($event)" *ngIf="login"></login-form>
-<register-form (toggleLogin)="toggleLogin($event)" *ngIf="!login"></register-form>
+<div class="page-margin">
+    <login-form (toggleLogin)="toggleLogin($event)" *ngIf="login"></login-form>
+    <register-form (toggleLogin)="toggleLogin($event)" *ngIf="!login"></register-form>
+</div>
