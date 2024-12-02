@@ -1,11 +1,10 @@
-.flex{
 
-    display: flex;
-    justify-content: space-evenly;
-    input {
-        width: 100% !important;
-    }
+form{
+    overflow-y: auto;
+    width: 95%!important;
+
     div{
+        width: 100%;
         display: flex;
         flex-direction: column;
     }
@@ -18,7 +17,6 @@
 }
 
 .form-side{
-
     border-left: solid 1px;
     width: 70%;
     height: 100%;

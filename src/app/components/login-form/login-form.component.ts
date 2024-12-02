@@ -6,11 +6,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { Users } from '../../modals/users/users';
 import { UserService } from '../../service/userService/user-service';
 import { LoadingComponent } from '../loading/loading.component';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'login-form',
   standalone: true,
-  imports: [LoginComponent, FormsModule, LoadingComponent],
+  imports: [LoginComponent, FormsModule, LoadingComponent, CommonModule],
   templateUrl: './login-form.component.html',
   styleUrl: './login-form.component.css'
 })

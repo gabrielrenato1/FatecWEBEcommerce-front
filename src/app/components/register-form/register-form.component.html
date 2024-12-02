@@ -9,46 +9,67 @@
     <div class="form-side">
         <h1>Cadastre-se</h1>
 
-
         <form action="">
 
-            <div class="flex">
-                <div>
-                    <span>Nome</span>
-                    <input type="text" required>
-                </div>
-                <div>
-                    <span>Email</span>
-                    <input type="text" required>
-                </div>
+            <div>
+                <span>Nome</span>
+                <input name="name" [(ngModel)]="name" type="text" required>
+            </div>
+        
+            <div>
+                <span>Email</span>
+                <input name="email" [(ngModel)]="email" type="text" required>
+            </div>
+        
+            <div>
+                <span>Senha</span>
+                <input name="password" [(ngModel)]="password" type="password" required>
             </div>
 
-            <div class="flex">
-                <div>
-                    <span>Senha</span>
-                    <input type="password" required>
-                </div>
-                <div>
-                    <span>Confirmar senha</span>
-                    <input type="password" required>
-                </div>
+            <div>
+                <span>CPF</span>
+                <input name="cpf" [(ngModel)]="cpf" type="text" required>
+            </div>
+            <div>
+                <span>Telefone</span>
+                <input name="phone" [(ngModel)]="phone" type="text" required>
             </div>
 
-            <div class="flex">
-                <div>
-                    <span>CPF</span>
-                    <input type="text" required>
-                </div>
-                <div>
-                    <span>Telefone</span>
-                    <input type="text" required>
-                </div>
+            <div>
+                <span>CEP</span>
+                <input name="cep" [(ngModel)]="cep" type="text" required>
             </div>
-            
-            <button id="login-button">Cadastrar</button>
+            <div>
+                <span>Endereço</span>
+                <input name="endereco" [(ngModel)]="endereco" type="text" required>
+            </div>
+            <div>
+                <span>Complemento</span>
+                <input name="complemento" [(ngModel)]="complemento" type="text" required>
+            </div>
+            <div>
+                <span>Estado</span>
+                <input name="estado" [(ngModel)]="estado" type="text" required>
+            </div>
+            <div>
+                <span>Cidade</span>
+                <input name="cidade" [(ngModel)]="cidade" type="text" required>
+            </div>
+            <div>
+                <span>Bairro</span>
+                <input name="bairro" [(ngModel)]="bairro" type="text" required>
+            </div>
+            <div>
+                <span>Número</span>
+                <input name="numero" [(ngModel)]="numero" type="number" required>
+            </div>
+
+            <button id="login-button" (click)="register()">Cadastrar</button>
         
         </form>
 
     </div>
+
+    <app-loading *ngIf="loading"></app-loading>
 
 </div>

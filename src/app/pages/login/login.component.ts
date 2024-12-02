@@ -13,7 +13,7 @@ import { CommonModule } from '@angular/common'
 
 export class LoginComponent {
 
-  public login = true;
+  public login = false;
 
   toggleLogin(event:any){
     this.login = event;
