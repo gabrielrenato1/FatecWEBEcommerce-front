@@ -1,6 +1,6 @@
 .card{
-    max-width: 95vw;
-    margin: auto;
+    /* max-width: 95vw; */
+    height: fit-content!important;
 }
 .card-image{
     width: 20%;
@@ -42,7 +42,6 @@ button{
 }
 
 .card-footer{
-    position: absolute;
     bottom: 0;
     display: flex;
     justify-content: space-between;
@@ -97,7 +96,7 @@ button{
     }
 
     .card-footer{
-        position: unset;
+        flex-direction: column;
     }
 
 }

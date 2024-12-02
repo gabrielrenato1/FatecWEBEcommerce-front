@@ -1,5 +1,5 @@
 nav{
-
+    z-index: 2;
     transition: 0.35s;
     width: 15vw;
     height: 100vh;
@@ -96,6 +96,7 @@ nav{
     nav{
 
         width: 85vw;
+        left: -86vw;
 
         #toggle-menu{
             left: 87vw;

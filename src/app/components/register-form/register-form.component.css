@@ -68,22 +68,33 @@ form{
 @media (orientation:portrait){
 
     .card{
-        display: block;
-        width: 90%;
+        display: flex;
         min-width: auto;
         margin-bottom: 20px;
+        flex-direction: column;
+        display: inline-table;
     }
+
+    .message-side{
+    
+        width: 90%;
+        padding: 0px;
+        margin-bottom: 35px;
+    
+    }
+
 
     .form-side{
         border-left: none;
-        border-right: none;
         border-top: solid 0.5px;
-        flex-direction: column;
-    }
+        width: 90%;
+        padding: 0px;
+        margin-top: 35px;
 
-    .flex{
-        display: block;
-    }
+        form{
+            width: 100%;
+        }
 
+    }
 
 }

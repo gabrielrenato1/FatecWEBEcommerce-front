@@ -19,6 +19,9 @@ export class NavbarComponent {
 
   constructor(private router:Router){
 
+    const width = window.innerWidth;
+    const height = window.innerHeight;
+    this.isOpenMenu = (width > height);
     this.setUser();
 
   }
@@ -28,14 +31,17 @@ export class NavbarComponent {
     var user = localStorage.getItem("auth-user")??null;
     this.user = (user != null) ? JSON.parse(user) : new Users;
 
+    var name = this.user.name.split(' ');
+    this.user.name = name.at(0) + ' ' + name.at(-1);
+
   }
 
-   toggleMenu(){
+   public toggleMenu(){
 
     var navItem = document.querySelector("nav");
     var contentItem = document.getElementById('content-wrap');
 
-    if(navItem !== null && contentItem !== null){
+    if((navItem !== null && contentItem !== null)){
     
       if(window.matchMedia("(orientation: portrait)").matches){
         navItem.style.left = this.isOpenMenu ? "-86vw" : "0vw";
